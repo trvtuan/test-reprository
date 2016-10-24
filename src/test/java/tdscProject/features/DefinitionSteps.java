@@ -9,12 +9,11 @@ public class DefinitionSteps {
     @Steps
     EndUserSteps endUserSteps;
 
-
-
-
-
+//---------------------------------CARTPAGE-----------------//
     @Given("^go to website$")
     public void goToWebsite() {
         endUserSteps.goToWebsite();
     }
+
+
 }
