@@ -13,8 +13,8 @@ public class DefinitionSteps {
 
 
 
-    @Given("^go to \"([^\"]*)\"$")
-    public void goTo() {
+    @Given("^go to website$")
+    public void goToWebsite() {
         endUserSteps.goToWebsite();
     }
 }
