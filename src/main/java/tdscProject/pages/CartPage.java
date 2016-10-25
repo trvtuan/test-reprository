@@ -3,11 +3,11 @@ package tdscProject.pages;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
-@DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary")
+@DefaultUrl("https://tdsc-staging.zaelab.com/")
 public class CartPage extends PageObject {
 
 
     public void goToWebsite() {
-        getDriver().navigate().to("http://google.com");
+        open();
     }
 }
