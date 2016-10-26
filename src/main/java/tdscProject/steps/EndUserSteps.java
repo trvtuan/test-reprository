@@ -18,15 +18,16 @@ public class EndUserSteps extends ScenarioSteps {
     public void goToWebsite() {
         cartPage.goToWebsite();
     }
-
+    @Step
     public void pageIsOpened(String arg0) {
-//        switch (arg0){
+        switch (arg0) {
 //            case "powergrill": header.pageAboutUsIsOpened(arg0);
 //                break;
 //            case "anglegrinder": header.pageAngleGrindersIsOpened(arg0);
 //                break;
-//        }
+            case "home": Assert.assertEquals("","");
 
+        }
 
     }
     @Step
@@ -47,7 +48,7 @@ public class EndUserSteps extends ScenarioSteps {
 
         }
     }
-
+    @Step
     public void pageIsOpenedWithUrl(String arg1, String arg2) {
         Assert.assertEquals(arg1, ft.pageHasHeader());
         Assert.assertEquals(arg2, ft.pageHasUrl());
