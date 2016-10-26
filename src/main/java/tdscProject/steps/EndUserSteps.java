@@ -21,17 +21,18 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     public void pageIsOpened(String arg0) {
-        switch (arg0){
-            case "powergrill": header.pageAboutUsIsOpened(arg0);
-                break;
-            case "anglegrinder": header.pageAngleGrindersIsOpened(arg0);
-                break;
-        }
+//        switch (arg0){
+//            case "powergrill": header.pageAboutUsIsOpened(arg0);
+//                break;
+//            case "anglegrinder": header.pageAngleGrindersIsOpened(arg0);
+//                break;
+//        }
 
 
     }
     @Step
     public void clickOnMenu(String arg0) {
+        header.clickOnAboutUsMenu(arg0);
 //        switch (arg0){
 //            case "powergrill": header.clickOnAboutUsMenu();
 //                break;

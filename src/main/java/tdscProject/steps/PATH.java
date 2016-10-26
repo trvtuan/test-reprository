@@ -20,9 +20,12 @@ public interface PATH {
     String PURCH = "";
     String RECRUITING = "";
     String CONTACT_US = "html/body/main/header/nav[3]/div/ul[2]/li[1]/span/a";
+//-----------------------
 
-    String[] array = {"html/body/main/header/nav[3]/div/ul[2]/li[2]/span/a",
-            "html/body/main/header/nav[3]/div/ul[2]/li[1]/span/a"};
+    String SEARCH_BAR= ".//*[@id='']";
+    String[] array = {
+            "html/body/main/header/nav[3]/div/ul[2]/li[1]/span/a",
+            "html/body/main/header/nav[3]/div/ul[2]/li[2]/span/a"};
 
 //    FOOTER ------------------------------
 

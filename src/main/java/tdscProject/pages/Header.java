@@ -13,8 +13,9 @@ public class Header extends PageObject {
 
     }
 
-    public void clickOnAboutUsMenu() {
+    public void clickOnAboutUsMenu(String arg0) {
         int d = PATH.array.length;
+
         for (int s=0;s<d;s++ ){
             $(PATH.array[s]).click();
 
