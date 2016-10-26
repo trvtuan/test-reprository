@@ -29,5 +29,14 @@ public class DefinitionSteps {
     }
 
 
+    @When("^click ([^\"]*)$")
+    public void clickLink(String arg)  {
+       endUserSteps.clickOntheLink(arg);
+    }
 
+    @Then("^([^\"]*) is opened with ([^\"]*)$")
+    public void pageIsOpenedWithUrl(String arg1, String arg2)  {
+        endUserSteps.pageIsOpenedWithUrl(arg1,arg2);
+
+    }
 }

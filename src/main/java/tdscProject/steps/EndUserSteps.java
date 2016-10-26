@@ -2,10 +2,8 @@ package tdscProject.steps;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import tdscProject.pages.CartPage;
-import tdscProject.pages.Checkout;
-import tdscProject.pages.Header;
-import tdscProject.pages.HomePage;
+import org.junit.Assert;
+import tdscProject.pages.*;
 
 public class EndUserSteps extends ScenarioSteps {
 
@@ -13,6 +11,7 @@ public class EndUserSteps extends ScenarioSteps {
     Header header;
     Checkout ck;
     HomePage hmp;
+    Footer ft;
 
 
     @Step
@@ -39,5 +38,18 @@ public class EndUserSteps extends ScenarioSteps {
 //            case "anglegrinder": header.clicOnAngleGrindersIsOpened();
 //                break;
 //        }
+    }
+    @Step
+    public void clickOntheLink(String arg) {
+        switch (arg){
+            case "About CDA": ft.clickOnTheLink();
+                break;
+
+        }
+    }
+
+    public void pageIsOpenedWithUrl(String arg1, String arg2) {
+        Assert.assertEquals(arg1, ft.pageHasHeader());
+        Assert.assertEquals(arg2, ft.pageHasUrl());
     }
 }
