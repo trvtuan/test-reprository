@@ -12,6 +12,7 @@ public class EndUserSteps extends ScenarioSteps {
     Checkout ck;
     HomePage hmp;
     Footer ft;
+    HybrisHmc hbr;
 
 
     @Step
@@ -52,5 +53,13 @@ public class EndUserSteps extends ScenarioSteps {
     public void pageIsOpenedWithUrl(String arg1, String arg2) {
         Assert.assertEquals(arg1, ft.pageHasHeader());
         Assert.assertEquals(arg2, ft.pageHasUrl());
+    }
+
+    public void goToHybrisHmc() {
+        hbr.goToHybrisHmc();
+    }
+
+    public void logInWithUserPass(String user, String pass) throws Throwable {
+        hbr.logInWithUserPass(user,pass);
     }
 }

@@ -31,4 +31,12 @@ public interface PATH {
 
 
 
+
+
+//   HYBRIS -------------------------
+
+    String HBR_USER = ".//*[@id='Main_user']";
+    String HBR_PASS = ".//*[@id='Main_password']";
+    String HBR_LOGIN = "//*[@id='outerTD']/table/tbody/tr/td/div/table/tbody/tr[4]/td[2]/div";
+
 }

@@ -39,4 +39,14 @@ public class DefinitionSteps {
         endUserSteps.pageIsOpenedWithUrl(arg1,arg2);
 
     }
+
+    @Given("^go to hybris hmc$")
+    public void goToHybrisHmc()  {
+       endUserSteps.goToHybrisHmc();
+    }
+
+    @When("^log in with user \"(.*)\" pass \"(.*)\"$")
+    public void logInWithUserPass(String user, String pass) throws Throwable  {
+       endUserSteps.logInWithUserPass(user,pass);
+    }
 }
