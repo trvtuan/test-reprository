@@ -29,7 +29,19 @@ public interface PATH {
 
 //    FOOTER ------------------------------
 
+    String[] FT_LINKS_ARRAY = {};
+    
 
+
+//----------HOMEPAGE
+
+    String HMP_CAR_LEFT = "";
+    String HMP_CAR_RGHT = "";
+    String HMP_PROD_IMAGE = "";
+    String HMP_PROD_NAME = "";
+    String HMP_BANNER_BUTTON = "";
+    String HMP_BAN_CAR_LEFT = "";
+    String HMP_BAN_CAR_RIGHT = "";
 
 
 
