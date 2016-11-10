@@ -42,12 +42,14 @@ public class EndUserSteps extends ScenarioSteps {
 //        }
     }
     @Step
-    public void clickOntheLink(String arg) {
-        switch (arg){
-            case "About CDA": ft.clickOnTheLink();
-                break;
+    public void clickOntheLink(String arg, int arg1) {
 
-        }
+//        switch (arg){
+//            case "About CDA":
+                ft.clickOnTheLink(arg1);
+//                break;
+//
+//        }
     }
     @Step
     public void pageIsOpenedWithUrl(String arg1, String arg2) {

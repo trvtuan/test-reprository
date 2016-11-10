@@ -29,9 +29,9 @@ public class DefinitionSteps {
     }
 
 
-    @When("^click ([^\"]*)$")
-    public void clickLink(String arg)  {
-       endUserSteps.clickOntheLink(arg);
+    @When("^click ([^\"]*) ([^\"]*)$")
+    public void clickLinkArg(String arg, int arg1)  {
+       endUserSteps.clickOntheLink(arg,arg1);
     }
 
     @Then("^([^\"]*) is opened with ([^\"]*)$")
@@ -49,4 +49,9 @@ public class DefinitionSteps {
     public void logInWithUserPass(String user, String pass) throws Throwable  {
        endUserSteps.logInWithUserPass(user,pass);
     }
+//
+//    @When("^click on \"(.*)\"$")
+//    public void clickOn(String arg0)  {
+//        endUserSteps.clickOnMenu(arg0);
+//    }
 }

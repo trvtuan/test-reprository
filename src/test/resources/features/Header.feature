@@ -13,3 +13,7 @@ Feature: As a user, I should be able to go to pages using links and menus in the
 
 
 
+  Scenario: Verify that logo is redirected to the Home page.
+    Given go to website
+    When click on "logo"
+

@@ -29,7 +29,7 @@ public interface PATH {
 
 //    FOOTER ------------------------------
 
-    String[] FT_LINKS_ARRAY = {};
+    String FT_LINKS_ARRAY = "//*[@class='clearfix']//ul//li//a";
     
 
 
@@ -43,12 +43,18 @@ public interface PATH {
     String HMP_BAN_CAR_LEFT = "";
     String HMP_BAN_CAR_RIGHT = "";
 
+// SEARCH
+
+    String SEARCH_PAGINATION_TOP = "";
+    String SEARCH_PAGINATION_BOT = "";
 
 
 //   HYBRIS -------------------------
 
-    String HBR_USER = ".//*[@id='Main_user']";
-    String HBR_PASS = ".//*[@id='Main_password']";
-    String HBR_LOGIN = "//*[@id='outerTD']/table/tbody/tr/td/div/table/tbody/tr[4]/td[2]/div";
+    String HBR_USER = "((.//*[@id='loginForm']/div/table//table//tr//div/table//td//table//td[3])[1]";
+    String HBR_PASS = "(.//input[@class='login z-textbox'])[1]";
+    String HBR_LOGIN = ".//*[@class='z-select']";
+    String HBR_CATEGORY = "";
+    String HBR_USER_GROUP = "";
 
 }

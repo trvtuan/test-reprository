@@ -1,11 +1,13 @@
 package tdscProject.pages;
 
 import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.annotations.DefaultUrl;
 import tdscProject.steps.PATH;
 
 /**
  * Created by ttruong on 25.10.16.
  */
+@DefaultUrl("https://tdsc-staging.zaelab.com")
 public class Header extends PageObject {
 
 
