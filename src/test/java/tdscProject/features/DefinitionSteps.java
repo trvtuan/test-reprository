@@ -1,5 +1,6 @@
 package tdscProject.features;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,25 +17,19 @@ public class DefinitionSteps {
         endUserSteps.goToWebsite();
     }
 
-    @Then("^([^\"]*) is opened$")
-    public void pageIsOpened(String arg0)  {
-        endUserSteps.pageIsOpened(arg0);
 
-    }
-
-
-    @When("^click on ([^\"]*)$")
+    @When("^click on \"([^\"]*)\"$")
     public void clickOnMenu(String arg0)   {
         endUserSteps.clickOnMenu(arg0);
     }
 
 
-    @When("^click ([^\"]*) ([^\"]*)$")
+    @When("^click \"([^\"]*)\" \"([^\"]*)\"$")
     public void clickLinkArg(String arg, int arg1)  {
        endUserSteps.clickOntheLink(arg,arg1);
     }
 
-    @Then("^([^\"]*) is opened with ([^\"]*)$")
+    @Then("^\"([^\"]*)\" is opened with \"([^\"]*)\"$")
     public void pageIsOpenedWithUrl(String arg1, String arg2)  {
         endUserSteps.pageIsOpenedWithUrl(arg1,arg2);
 
@@ -49,9 +44,30 @@ public class DefinitionSteps {
     public void logInWithUserPass(String user, String pass) throws Throwable  {
        endUserSteps.logInWithUserPass(user,pass);
     }
-//
-//    @When("^click on \"(.*)\"$")
-//    public void clickOn(String arg0)  {
-//        endUserSteps.clickOnMenu(arg0);
-//    }
+
+    @Then("^\"([^\"]*)\" is opened$")
+    public void pageIsOpened(String arg0) {
+        endUserSteps.pageIsOpened(arg0);
+    }
+
+
+    @And("^sign in using \"(.*)\" pass \"(.*)\"$")
+    public void signInUsingPass(String arg0, String arg1) throws Throwable {
+       endUserSteps.signInUsingPass(arg0, arg1);
+    }
+
+    @Then("^total saving is shown in the header$")
+    public void totalSavingIsShownInTheHeader() throws Throwable {
+        endUserSteps.totalSavingIsShownInTheHeader();
+    }
+
+    @Then("^validation messages are shown in the page$")
+    public void validationMessagesAreShownInThePage() throws Throwable {
+       endUserSteps.validationMessagesAreShownInThePage();
+    }
+
+    @When("^click on maginfying glass$")
+    public void clickOnMaginfyingGlass() throws Throwable {
+      endUserSteps.clickOnMaginfyingGlass();
+    }
 }

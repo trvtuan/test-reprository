@@ -7,29 +7,29 @@ public interface PATH {
 
 
 //  Header  ----------------------------
-
+    String HEADER_LINKS="html/body/main/header/nav//span/a";
     String MAGNIF_GlASS = "";
-    String SIGN_IN = "";
+    String SIGN_IN = ".liOffcanvas.signin>a";
     String SEARCH_FIELD = "";
     String CART_BUCKET_ICON = "";
-    String LOGO_TDSC = "";
-    String PRODUCTS_MENU = "";
+    String LOGO_TDSC = "(//*[@class='logo'])[2]";
+    String PRODUCTS_MENU = "(html/body/main/header//span//a)[1]";
     String SALES_MENU = "";
-    String ABOUT_TDSK = "";
-    String PRAC_MANGMNT = "";
+    String ABOUT_TDSK = "(html/body/main/header//span//a)[2]";
+    String PRAC_MANGMNT = "(html/body/main/header//span//a)[3]";
     String PURCH = "";
     String RECRUITING = "";
     String CONTACT_US = "html/body/main/header/nav[3]/div/ul[2]/li[1]/span/a";
 //-----------------------
 
     String SEARCH_BAR= ".//*[@id='']";
-    String[] array = {
+    String[] ARRAY = {
             "html/body/main/header/nav[3]/div/ul[2]/li[1]/span/a",
             "html/body/main/header/nav[3]/div/ul[2]/li[2]/span/a"};
 
 //    FOOTER ------------------------------
 
-    String FT_LINKS_ARRAY = "//*[@class='clearfix']//ul//li//a";
+    String FT_LINKS_ARRAY = "html/body/main/footer/div//a";
     
 
 
@@ -56,5 +56,17 @@ public interface PATH {
     String HBR_LOGIN = ".//*[@class='z-select']";
     String HBR_CATEGORY = "";
     String HBR_USER_GROUP = "";
+
+
+
+//    -------SIGN IN-----------
+    String SIGN_EMAIL = ".//*[@id='j_username']";
+    String SIGN_PASS = ".//*[@id='j_password']";
+    String SIGN_BUTTON = ".//*[@id='loginForm']/button";
+    String SIGN_FORGOT = ".//*[@id='loginForm']/div[3]/a";
+
+//---FORGOT PASSWORD---------
+    String FWP_X = ".//*[@id='cboxClose']";
+    String FWP_RESET = ".//*[@id='forgottenPwdForm']/div[1]/button";
 
 }

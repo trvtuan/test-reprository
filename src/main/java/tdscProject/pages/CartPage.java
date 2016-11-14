@@ -3,7 +3,7 @@ package tdscProject.pages;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
-@DefaultUrl("http://www.cda.org")
+@DefaultUrl("https://tdsc-staging.zaelab.com/tdscstorefront/?site=powertools")
 public class CartPage extends PageObject {
 
 

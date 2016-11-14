@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by ttruong on 26.10.16.
  */
-@DefaultUrl("http://www.cda.org")
+@DefaultUrl("https://tdsc-prod.zaelab.com/tdscstorefront/?site=powertools")
 public class Footer extends PageObject {
 
     public void clickOnTheLink(int arg1) {
@@ -26,7 +26,7 @@ public class Footer extends PageObject {
 //            System.out.print(pageHasHeader());
 //            System.out.print(pageHasUrl());
 
-//        }
+       //        }
 
 
     }
