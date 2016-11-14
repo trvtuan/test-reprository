@@ -4,7 +4,7 @@ Feature: As a user,
           changing search pages using paginations.
 
 
-  Scenario: Verify that "Search" page is opened if user search terms which generated no results.
+  Scenario: sel.06.0001 Verify that "Search" page is opened if user search terms which generated no results.
       Given go to website
-      When click on maginfying glass
+      When click on magnifying glass
 

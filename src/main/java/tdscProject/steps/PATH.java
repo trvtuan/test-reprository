@@ -45,8 +45,9 @@ public interface PATH {
 
 // SEARCH
 
-    String SEARCH_PAGINATION_TOP = "";
-    String SEARCH_PAGINATION_BOT = "";
+    String SRCH_PAG_TOP = "";
+    String SRCH_PAG_BOT = "";
+    String SRCH_MAG_GL_ICON = "//*[@name='search_form_SearchBox']//button";
 
 
 //   HYBRIS -------------------------
@@ -68,5 +69,9 @@ public interface PATH {
 //---FORGOT PASSWORD---------
     String FWP_X = ".//*[@id='cboxClose']";
     String FWP_RESET = ".//*[@id='forgottenPwdForm']/div[1]/button";
+    String FWP_EMAIL = ".//*[@id='forgottenPwd.email']";
+    String FWP_TEXT_EL=".//*[@id='validEmail']";
+    String FWP_TEXT = "Password reset instructions have been sent to your e-mail address. Please contact customer support if you require additional assistance.";
+
 
 }

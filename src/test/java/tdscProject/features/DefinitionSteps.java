@@ -66,8 +66,19 @@ public class DefinitionSteps {
        endUserSteps.validationMessagesAreShownInThePage();
     }
 
-    @When("^click on maginfying glass$")
-    public void clickOnMaginfyingGlass() throws Throwable {
-      endUserSteps.clickOnMaginfyingGlass();
+
+    @When("^click on magnifying glass$")
+    public void clickOnMagnifyingGlass() throws Throwable {
+        endUserSteps.clickOnMagnifyingGlass();
+    }
+
+    @And("^populate field with \"([^\"]*)\"$")
+    public void populateFieldWith(String emailaddress) throws Throwable {
+       endUserSteps.populateFieldWith(emailaddress);
+    }
+
+    @Then("^message that notify email has been sent to the user$")
+    public void messageThatNotifyEmailHasBeenSentToTheUser() throws Throwable {
+        endUserSteps.messageThatNotifyEmailHasBeenSentToTheUser();
     }
 }

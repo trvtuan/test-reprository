@@ -14,6 +14,7 @@ public class EndUserSteps extends ScenarioSteps {
     Footer ft;
     HybrisHmc hbr;
     SignIn signIn;
+    SearchPage srcpage;
 
 
     @Step
@@ -97,12 +98,22 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertEquals("2016 Total Savings", header.totalSavingTitle());
         Assert.assertTrue(header.myAccountProfileIsShown());
     }
-
+    @Step
     public void validationMessagesAreShownInThePage() {
         Assert.assertEquals("Your username or password was incorrect.",signIn.validationMessages());
     }
 
-    public void clickOnMaginfyingGlass() {
+    @Step
+    public void clickOnMagnifyingGlass() {
+        srcpage.clickOnMagnifyingGlass();
+    }
+    @Step
+    public void populateFieldWith(String emailaddress) {
+        signIn.populateFieldWith(emailaddress);
+    }
 
+    public void messageThatNotifyEmailHasBeenSentToTheUser() {
+        signIn.messageThatNotifyEmailHasBeenSentToTheUser();
+        Assert.assertEquals(PATH.FWP_TEXT,signIn.messageText());
     }
 }

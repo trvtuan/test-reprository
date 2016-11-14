@@ -42,4 +42,18 @@ public class SignIn extends PageObject{
     public boolean forgotPassPopupElements() {
         return $(PATH.FWP_X).isDisplayed() & $(PATH.FWP_RESET).isDisplayed();
     }
+
+    public void populateFieldWith(String emailaddress) {
+        $(PATH.FWP_EMAIL).sendKeys(emailaddress);
+
+    }
+
+    public void messageThatNotifyEmailHasBeenSentToTheUser() {
+        $(PATH.FWP_RESET).click();
+
+    }
+
+    public String messageText() {
+        return  $(PATH.FWP_TEXT_EL).getText();
+    }
 }
