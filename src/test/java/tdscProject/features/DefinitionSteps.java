@@ -81,4 +81,14 @@ public class DefinitionSteps {
     public void messageThatNotifyEmailHasBeenSentToTheUser() throws Throwable {
         endUserSteps.messageThatNotifyEmailHasBeenSentToTheUser();
     }
+
+    @Then("^empty search result page is opened$")
+    public void emptySearchResultPageIsOpened() throws Throwable {
+        endUserSteps.emptySearchResultPageIsOpened();
+    }
+
+    @Then("^click on Continue Shopping button in the page$")
+    public void clickOnContinueShoppingButtonInThePage() throws Throwable {
+        endUserSteps.clickOnContinueShoppingButtonInThePage();
+    }
 }

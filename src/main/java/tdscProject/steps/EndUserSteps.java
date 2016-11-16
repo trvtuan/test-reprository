@@ -116,4 +116,12 @@ public class EndUserSteps extends ScenarioSteps {
         signIn.messageThatNotifyEmailHasBeenSentToTheUser();
         Assert.assertEquals(PATH.FWP_TEXT,signIn.messageText());
     }
+    @Step
+    public void emptySearchResultPageIsOpened() {
+        Assert.assertTrue(srcpage.emptySearchResultPageIsOpened());
+    }
+    @Step
+    public void clickOnContinueShoppingButtonInThePage() {
+        srcpage.clickOnContinueShoppingButtonInThePage();
+    }
 }

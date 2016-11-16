@@ -24,4 +24,5 @@ Feature: As a user, I should be able to go to pages using links and menus in the
       And sign in using "alejandro.navarro@rustic-hw.com" pass "12341234"
       Then total saving is shown in the header
 
+  Scenario: Verify that
 

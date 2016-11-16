@@ -8,6 +8,8 @@ Feature: As a user,
       Given go to website
       When click on magnifying glass
       Then empty search result page is opened
+      Then click on Continue Shopping button in the page
+      Then "home page" is opened
 
   Scenario: sel.06.0002 Verify that "Search" page is opened with search results.
       Given go to website

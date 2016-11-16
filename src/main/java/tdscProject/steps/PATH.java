@@ -72,6 +72,10 @@ public interface PATH {
     String FWP_EMAIL = ".//*[@id='forgottenPwd.email']";
     String FWP_TEXT_EL=".//*[@id='validEmail']";
     String FWP_TEXT = "Password reset instructions have been sent to your e-mail address. Please contact customer support if you require additional assistance.";
+//---------SEARHC_PAGE------------------------------
+
+    String SRC_EMP_SHOP_BUTTON = "html/body/main/div[4]/div[2]/a";
+    String SRC_TEXT_NO_RESULTS="html/body/main/div[4]/div[3]/div/div/h2";
 
 
 }
