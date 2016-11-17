@@ -13,7 +13,12 @@ Feature:  validation messages
     Given go to website
     When click on "Sign In"
     And click on "forgot password"
-    And populate field with "test.tdsc@gmail.com"
+    And click on X buton to close pop-up
+    Then populate field with "test.tdsc@gmail.com"
     Then message that notify email has been sent to the user
 
-  Scenario: sel.03.0003 Verify that
+  Scenario: sel.03.0003 Verify that Home page is opened if click on "Home" text link in breadcrumb.
+    Given go to website
+    When click on "Sign In"
+    And click on breadcrumb "home"
+    Then "home page" is opened

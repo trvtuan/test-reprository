@@ -7,7 +7,7 @@ import tdscProject.steps.PATH;
 /**
  * Created by ttruong on 27.10.16.
  */
-@DefaultUrl("https://tdsc-staging.zaelab.com/backoffice")
+@DefaultUrl("https://zaelab:baleaz@tdsc-staging.zaelab.com/hmc/hybris")
 public class HybrisHmc extends PageObject{
     public void goToHybrisHmc() {
         open();

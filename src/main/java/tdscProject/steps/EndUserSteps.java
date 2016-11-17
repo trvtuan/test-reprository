@@ -15,6 +15,7 @@ public class EndUserSteps extends ScenarioSteps {
     HybrisHmc hbr;
     SignIn signIn;
     SearchPage srcpage;
+    MyAccount myAcc;
 
 
     @Step
@@ -60,6 +61,8 @@ public class EndUserSteps extends ScenarioSteps {
                 signIn.clickOnForgotPassword();
                 Assert.assertEquals("Reset Password",signIn.forgotPopupHasTitle());
                 Assert.assertTrue(signIn.forgotPassPopupElements());
+                signIn.messageThatNotifyEmailHasBeenSentToTheUser();
+                Assert.assertEquals("Please enter a valid email", signIn.alertEmailAddressMess());
         }
     }
 
@@ -123,5 +126,29 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void clickOnContinueShoppingButtonInThePage() {
         srcpage.clickOnContinueShoppingButtonInThePage();
+    }
+    @Step
+    public void clickOnXButonToClosePopUp() {
+        signIn.clickOnXButonToClosePopUp();
+        signIn.clickOnForgotPassword();
+    }
+    @Step
+    public void clickOnBreadcrumb(String breadcrumb) {
+        switch (breadcrumb){
+
+            case "home": signIn.clickOnBreadcrumb(0);
+                    }
+    }
+    @Step
+    public void hoverToMyAccountTextLink() {
+        myAcc.hoverToMyAccountTextLink();
+    }
+    @Step
+    public void myAccountPopUpIsOpenedWithOptions() {
+        Assert.assertEquals(PATH.ACC_OPTIONS_TEXT,myAcc.myAccountPopUpIsOpenedWithOptions());
+    }
+    @Step
+    public void clickOnOption() {
+
     }
 }

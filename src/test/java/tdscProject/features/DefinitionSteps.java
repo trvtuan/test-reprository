@@ -91,4 +91,31 @@ public class DefinitionSteps {
     public void clickOnContinueShoppingButtonInThePage() throws Throwable {
         endUserSteps.clickOnContinueShoppingButtonInThePage();
     }
+
+
+    @And("^click on X buton to close pop-up$")
+    public void clickOnXButonToClosePopUp() throws Throwable {
+        endUserSteps.clickOnXButonToClosePopUp();
+
+    }
+
+    @And("^click on breadcrumb \"([^\"]*)\"$")
+    public void clickOnBreadcrumb(String breadcrumb) throws Throwable {
+        endUserSteps.clickOnBreadcrumb(breadcrumb);
+    }
+
+    @When("^hover to my account text link$")
+    public void hoverToMyAccountTextLink() throws Throwable {
+        endUserSteps.hoverToMyAccountTextLink();
+    }
+
+    @Then("^my account pop-up is opened with options$")
+    public void myAccountPopUpIsOpenedWithOptions() throws Throwable {
+        endUserSteps.myAccountPopUpIsOpenedWithOptions();
+    }
+
+    @And("^click on \"(.*)\" menu$")
+    public void clickOnOption(String option) throws Throwable {
+        endUserSteps.clickOnOption();
+    }
 }

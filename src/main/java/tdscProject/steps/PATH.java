@@ -52,9 +52,9 @@ public interface PATH {
 
 //   HYBRIS -------------------------
 
-    String HBR_USER = "((.//*[@id='loginForm']/div/table//table//tr//div/table//td//table//td[3])[1]";
-    String HBR_PASS = "(.//input[@class='login z-textbox'])[1]";
-    String HBR_LOGIN = ".//*[@class='z-select']";
+    String HBR_USER = ".//*[@id='Main_user']";
+    String HBR_PASS = ".//*[@id='Main_password']";
+    String HBR_LOGIN = ".//*[@id='Main_label']";
     String HBR_CATEGORY = "";
     String HBR_USER_GROUP = "";
 
@@ -65,6 +65,8 @@ public interface PATH {
     String SIGN_PASS = ".//*[@id='j_password']";
     String SIGN_BUTTON = ".//*[@id='loginForm']/button";
     String SIGN_FORGOT = ".//*[@id='loginForm']/div[3]/a";
+    String SIGN_FORG_X_CLOSE = ".//*[@id='cboxClose']";
+    String SIGN_BREADCRUMB = "html/body/main/div[2]/div/ol/li";
 
 //---FORGOT PASSWORD---------
     String FWP_X = ".//*[@id='cboxClose']";
@@ -77,5 +79,17 @@ public interface PATH {
     String SRC_EMP_SHOP_BUTTON = "html/body/main/div[4]/div[2]/a";
     String SRC_TEXT_NO_RESULTS="html/body/main/div[4]/div[3]/div/div/h2";
 
+//    ---------MY_ACCOUNT-----------------------
+    String ACC_OPTIONS="//*[@class='account-menu']//li";
+    String ACC_OPTIONS_TEXT= "My Account\n" +
+            "Personal Details\n" +
+            "Password\n" +
+            "Payment Details\n" +
+            "Quotes\n" +
+            "Order History\n" +
+            "Email Address\n" +
+            "Address Book\n" +
+            "Replenishment Orders\n" +
+            "Saved Carts";
 
 }

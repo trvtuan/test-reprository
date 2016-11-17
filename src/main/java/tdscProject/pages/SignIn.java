@@ -1,7 +1,12 @@
 package tdscProject.pages;
 
+import com.beust.jcommander.internal.Lists;
 import net.serenitybdd.core.pages.PageObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import tdscProject.steps.PATH;
+
+import java.util.List;
 
 /**
  * Created by ttruong on 11.11.16.
@@ -55,5 +60,22 @@ public class SignIn extends PageObject{
 
     public String messageText() {
         return  $(PATH.FWP_TEXT_EL).getText();
+    }
+
+    public String alertEmailAddressMess() {
+        return $(".//*[@id='email.errors']").getText();
+    }
+
+    public void clickOnXButonToClosePopUp() {
+        $(PATH.SIGN_FORG_X_CLOSE).click();
+        waitABit(1000);
+
+
+    }
+
+    public void clickOnBreadcrumb(int breadcumb_element) {
+        List<WebElement> br = Lists.newArrayList(getDriver().findElements(By.xpath(PATH.FT_LINKS_ARRAY)));
+        br.get(breadcumb_element).click();
+
     }
 }
