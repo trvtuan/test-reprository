@@ -148,7 +148,10 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertEquals(PATH.ACC_OPTIONS_TEXT,myAcc.myAccountPopUpIsOpenedWithOptions());
     }
     @Step
-    public void clickOnOption() {
+    public void clickOnOption(String option) {
+        switch (option){
+            case "Personal details": myAcc.clickOnOption(1);
+        }
 
     }
 }

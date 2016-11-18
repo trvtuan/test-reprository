@@ -114,8 +114,8 @@ public class DefinitionSteps {
         endUserSteps.myAccountPopUpIsOpenedWithOptions();
     }
 
-    @And("^click on \"(.*)\" menu$")
+      @And("^click on \"(.*)\" option$")
     public void clickOnOption(String option) throws Throwable {
-        endUserSteps.clickOnOption();
+        endUserSteps.clickOnOption(option);
     }
 }
