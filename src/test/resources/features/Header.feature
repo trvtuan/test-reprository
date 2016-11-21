@@ -21,7 +21,7 @@ Feature: As a user, I should be able to go to pages using links and menus in the
   Scenario: sel.01.0003 Verify that profile menu is shown in the header after authorization.
       Given go to website
       When click on "Sign In"
-      And sign in using "alejandro.navarro@rustic-hw.com" pass "12341234"
+      And sign in using "tuan.truong@zae;ab.com" pass "123456"
       Then total saving is shown in the header
 
 

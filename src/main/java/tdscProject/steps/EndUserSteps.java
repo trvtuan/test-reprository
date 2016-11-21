@@ -3,6 +3,7 @@ package tdscProject.steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import tdscProject.pages.*;
 
 public class EndUserSteps extends ScenarioSteps {
@@ -29,6 +30,7 @@ public class EndUserSteps extends ScenarioSteps {
 
             case "home page":
                 Assert.assertEquals("", "");
+            case "Personal Details": Assert.assertEquals(PATH.ACC_PERS_DET_FIELDS,myAcc.fieldsArePresented());
 
         }
 
@@ -146,11 +148,13 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void myAccountPopUpIsOpenedWithOptions() {
         Assert.assertEquals(PATH.ACC_OPTIONS_TEXT,myAcc.myAccountPopUpIsOpenedWithOptions());
+        Assert.assertTrue(myAcc.getDriver().findElement(By.xpath(PATH.ACC_OPTIONS)).isDisplayed());
+
     }
     @Step
     public void clickOnOption(String option) {
         switch (option){
-            case "Personal details": myAcc.clickOnOption(1);
+            case "Personal Details": myAcc.clickOnOption(4);
         }
 
     }

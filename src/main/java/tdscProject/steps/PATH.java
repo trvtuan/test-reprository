@@ -80,16 +80,19 @@ public interface PATH {
     String SRC_TEXT_NO_RESULTS="html/body/main/div[4]/div[3]/div/div/h2";
 
 //    ---------MY_ACCOUNT-----------------------
-    String ACC_OPTIONS="//*[@class='account-menu']//li";
+    String ACC_OPTIONS= "//*[@class='account-menu']";
     String ACC_OPTIONS_TEXT= "My Account\n" +
-            "Personal Details\n" +
-            "Password\n" +
-            "Payment Details\n" +
             "Quotes\n" +
             "Order History\n" +
             "Email Address\n" +
+            "Personal Details\n" +
             "Address Book\n" +
+            "Payment Details\n" +
+            "Password\n" +
             "Replenishment Orders\n" +
-            "Saved Carts";
+            "Saved Carts\n" +
+            "Sign Out";
+    String ACC_PERS_DET = ".//*[@id='updateProfileForm']//div//label";
+    String ACC_PERS_DET_FIELDS = "";
 
 }
