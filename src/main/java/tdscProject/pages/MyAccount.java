@@ -25,7 +25,7 @@ public class MyAccount extends PageObject {
 
     public void clickOnOption(int option) {
                 List<WebElement> op = Lists.newArrayList(getDriver().findElements(By.xpath("//li[@class='yCmsComponent']//a")));
-                op.get(3).click();
+                op.get(option).click();
 //        JavascriptExecutor js = (JavascriptExecutor)getDriver();
 //        js.executeScript("arguments[3].click();", op);
 
