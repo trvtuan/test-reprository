@@ -14,7 +14,7 @@ Feature:  validation messages
     When click on "Sign In"
     And click on "forgot password"
     And click on X buton to close pop-up
-    Then populate field with "test.tdsc@gmail.com"
+    Then populate field with "tuan.truong@zaelab.com"
     Then message that notify email has been sent to the user
 
   Scenario: sel.03.0003 Verify that Home page is opened if click on "Home" text link in breadcrumb.

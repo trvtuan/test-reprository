@@ -67,6 +67,10 @@ public interface PATH {
     String SIGN_FORGOT = ".//*[@id='loginForm']/div[3]/a";
     String SIGN_FORG_X_CLOSE = ".//*[@id='cboxClose']";
     String SIGN_BREADCRUMB = "html/body/main/div[2]/div/ol/li";
+//    ---------T&C-----------
+    String TC_ACCEPT =".//*[@id='decisionAccept']";
+    String TC_DECLINE=".//*[@id='decisionDecline']";
+    String TC_X_CLOSE = ".//*[@id='cboxClose']";
 
 //---FORGOT PASSWORD---------
     String FWP_X = ".//*[@id='cboxClose']";

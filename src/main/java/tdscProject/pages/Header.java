@@ -35,6 +35,7 @@ public class Header extends PageObject {
         $(PATH.SIGN_EMAIL).sendKeys(arg0);
         $(PATH.SIGN_PASS).sendKeys(arg1);
         $(PATH.SIGN_BUTTON).click();
+
     }
 
     public String totalSavingTitle() {

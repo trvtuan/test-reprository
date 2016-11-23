@@ -15,9 +15,17 @@ Feature: As a user , I should be able to change my personal details
     When click on "Sign In"
     And sign in using "tuan.truong@zaelab.com" pass "123456"
     And hover to my account text link
-    And click on "Personal Details" option
+    And click on "<menu>" option
     Then "<page>" is opened
 
     Examples:
-     |page|
-    |Personal Details |
+     |menu              |page           |
+     |Personal Details  |               |
+     |Order History  |               |
+     |Email Address  |               |
+     |Personal Details  |               |
+     |Address Book  |               |
+     |Payment Details  |               |
+     |Password  |               |
+     |Sign Out  |  home page   |
+#     |Personal Details  |               |

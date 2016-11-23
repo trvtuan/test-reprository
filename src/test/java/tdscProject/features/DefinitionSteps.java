@@ -109,16 +109,20 @@ public class DefinitionSteps {
         endUserSteps.hoverToMyAccountTextLink();
     }
 
-    @Then("^my account pop-up is opened with options$")
+    @And("^my account pop-up is opened with options$")
     public void myAccountPopUpIsOpenedWithOptions() throws Throwable {
         endUserSteps.myAccountPopUpIsOpenedWithOptions();
     }
 
-      @And("^click on \"(.*)\" option$")
+      @And("^click on \"([^\"]*)\" option$")
     public void clickOnOption(String option) throws Throwable {
         endUserSteps.clickOnOption(option);
     }
 
 
-
+//
+//    @Then("^page \"([^\"]*)\" is opened$")
+//    public void pageMyAccIsOpened(String page) throws Throwable {
+//        endUserSteps.pageMyAccIsOpened(page);
+//    }
 }
