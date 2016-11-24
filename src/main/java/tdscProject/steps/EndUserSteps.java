@@ -34,8 +34,9 @@ public class EndUserSteps extends ScenarioSteps {
                 Assert.assertTrue(getDriver().
                         findElement(By.xpath("html/body/main/div[3]/div[3]/div[5]/div[1]")).isDisplayed());
                 break;
-            case "Personal Details": Assert.assertEquals(PATH.ACC_PERS_DET_FIELDS,myAcc.fieldsArePresented());
+            case "Personal Details": Assert.assertTrue(myAcc.fieldsArePresented());
                 break;
+
             case "":
                 break;
 
@@ -130,7 +131,7 @@ public class EndUserSteps extends ScenarioSteps {
     public void populateFieldWith(String emailaddress) {
         signIn.populateFieldWith(emailaddress);
     }
-
+    @Step
     public void messageThatNotifyEmailHasBeenSentToTheUser() {
         signIn.messageThatNotifyEmailHasBeenSentToTheUser();
         Assert.assertEquals(PATH.FWP_TEXT,signIn.messageText());
@@ -174,17 +175,43 @@ public class EndUserSteps extends ScenarioSteps {
                 break;
             case "Address Book":myAcc.clickOnOption(5);
                 break;
-            case "Payment Details":myAcc.clickOnOption(7);
+            case "Payment Details":myAcc.clickOnOption(6);
                 break;
             case "Password":myAcc.clickOnOption(8);
                 break;
-            case "Sign Out": myAcc.clickOnOption(10);
+            case "Sign Out": myAcc.clickOnOption(9);
                 break;
 //            case "":
 //                break;
-            case "Personal Details": myAcc.clickOnOption(4);
+            case "Personal Details": myAcc.clickOnOption(3);
                 break;
         }
+
+    }
+    @Step
+    public void emptyDEAFieldAndClickOnUpdate() {
+        myAcc.emptyDEAFieldAndClickOnUpdate();
+    }
+    @Step
+    public void validationMessagesForTheRequiredFieldsAreShown() {
+        Assert.assertEquals("Please enter a DEA License Number",myAcc.validationMessagesForTheRequiredFieldsAreShown());
+        Assert.assertEquals("Please correct the errors below.",signIn.validationMessages());
+
+    }
+    @Step
+    public void updateThePersonalDetails() {
+      myAcc.updateThePersonalDetails();
+    }
+    @Step
+    public void infoIsUpdated() {
+        Assert.assertEquals("Your profile has been updated",signIn.validationMessages());
+    }
+    @Step
+    public void homePageIsOpenedIfClickOnCancelButton() {
+        getDriver().findElement(By.xpath(PATH.ACC_PERS_CANCEL)).click();
+    }
+
+    public void clickOnButton(String button) {
 
     }
 

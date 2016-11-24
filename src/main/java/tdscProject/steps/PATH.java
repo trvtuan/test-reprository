@@ -96,7 +96,24 @@ public interface PATH {
             "Replenishment Orders\n" +
             "Saved Carts\n" +
             "Sign Out";
-    String ACC_PERS_DET = ".//*[@id='updateProfileForm']//div//label";
-    String ACC_PERS_DET_FIELDS = "";
+    String ACC_PERS_TITLE = ".//*[@id='updateProfileForm']/div[1]/label";
+    String ACC_PERS_FIRST = ".//*[@id='updateProfileForm']/div[2]/label";
+    String ACC_PERS_LAST = ".//*[@id='updateProfileForm']/div[3]/label";
+    String ACC_PERS_CDA = ".//*[@id='updateProfileForm']/div[4]/label";
+    String ACC_PERS_PERSON = ".//*[@id='updateProfileForm']/div[5]/label";
+    String ACC_PERS_CA = ".//*[@id='updateProfileForm']/div[6]/label";
+    String ACC_PERS_DEA = ".//*[@id='updateProfileForm']/div[7]/label";
+    String ACC_PERS_PHONE = ".//*[@id='updateProfileForm']/div[8]/label";
+    String ACC_PERS_UPDATE = "(//*[@id='updateProfileForm']//button)[1]";
+    String ACC_PERS_CANCEL = "(//*[@id='updateProfileForm']//button)[2]";
+//    String ACC_PERS_DET_FIELDS = "";
+    String GLOBAL_MESSAGE = "//div[@class='global-alerts']";
+
+    String ACC_ADDRESS_ADD="//*[@class='account-section-header-add pull-right']//a";
+    String ACC_ADDRESS_EDIT="(//a[@class='action-links'])[1]";
+    String ACC_ADDRESS_SET = "(//*[@class='account-addressbook account-list']//a[1])[2]";
+    String ACC_ADDRESS_REMOVE = "(html/body/main/div[4]//div[2]//a[2])[1]";
+//    String ACC_ADDRESS
+//    String ACC_ADDRESS
 
 }

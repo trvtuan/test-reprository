@@ -119,6 +119,36 @@ public class DefinitionSteps {
         endUserSteps.clickOnOption(option);
     }
 
+    @And("^empty DEA field and click on update$")
+    public void emptyDEAFieldAndClickOnUpdate() throws Throwable {
+        endUserSteps.emptyDEAFieldAndClickOnUpdate();
+    }
+
+    @Then("^validation messages for the required fields are shown$")
+    public void validationMessagesForTheRequiredFieldsAreShown() throws Throwable {
+        endUserSteps.validationMessagesForTheRequiredFieldsAreShown();
+    }
+
+    @And("^update the personal details$")
+    public void updateThePersonalDetails() throws Throwable {
+        endUserSteps.updateThePersonalDetails();
+    }
+
+    @Then("^\"(.*)\" is updated$")
+    public void infoIsUpdated(String info) throws Throwable {
+        endUserSteps.infoIsUpdated();
+    }
+
+    @And("^home page is opened if click on cancel button$")
+    public void homePageIsOpenedIfClickOnCancelButton() throws Throwable {
+       endUserSteps.homePageIsOpenedIfClickOnCancelButton();
+    }
+
+    @And("^click on \"(.*)\" button$")
+    public void clickOnButton(String button) throws Throwable {
+        endUserSteps.clickOnButton(button);
+    }
+
 
 //
 //    @Then("^page \"([^\"]*)\" is opened$")

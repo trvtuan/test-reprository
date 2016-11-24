@@ -31,7 +31,37 @@ public class MyAccount extends PageObject {
 
     }
 
-    public String fieldsArePresented() {
-        return $(PATH.ACC_PERS_DET).getText();
+    public boolean fieldsArePresented() {
+        return $(PATH.ACC_PERS_CA).isDisplayed()&
+                $(PATH.ACC_PERS_CDA).isDisplayed()&
+        $(PATH.ACC_PERS_PERSON).isDisplayed()&
+        $(PATH.ACC_PERS_PHONE).isDisplayed()&
+        $(PATH.ACC_PERS_FIRST).isDisplayed()&
+        $(PATH.ACC_PERS_LAST).isDisplayed()&
+        $(PATH.ACC_PERS_TITLE).isDisplayed()&
+        $(PATH.ACC_PERS_DEA).isDisplayed()&
+        $(PATH.ACC_PERS_CANCEL).isDisplayed()&
+                $(PATH.ACC_PERS_UPDATE).isDisplayed();
+    }
+
+    public void emptyDEAFieldAndClickOnUpdate() {
+        $("//*[@id='profile.deaLicenseNumber']").clear();
+        $(PATH.ACC_PERS_UPDATE).click();
+    }
+
+    public String validationMessagesForTheRequiredFieldsAreShown() {
+        return $(".//*[@id='deaLicenseNumber.errors']").getText();
+    }
+
+    public void updateThePersonalDetails() {
+        String phone = $(".//*[@id='profile.primaryPhone']").getValue();
+        String dea = $("//*[@id='profile.deaLicenseNumber']").getValue();
+        if (dea!=null) {
+//            $(".//*[@id='profile.primaryPhone']").sendKeys("1111");
+            $("//*[@id='profile.deaLicenseNumber']").sendKeys("1111");
+            $(PATH.ACC_PERS_UPDATE).click();
+        } else {
+            $(PATH.ACC_PERS_UPDATE).click();
+        }
     }
 }

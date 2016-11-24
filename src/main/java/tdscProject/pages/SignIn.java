@@ -20,7 +20,7 @@ public class SignIn extends PageObject{
     }
 
     public String validationMessages() {
-        String value = $("//div[@class='global-alerts']").getText();
+        String value = $(PATH.GLOBAL_MESSAGE).getText();
         return value.substring(value.indexOf("\n")+1);
     }
 
