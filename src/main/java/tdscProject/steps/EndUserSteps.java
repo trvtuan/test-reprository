@@ -72,10 +72,7 @@ public class EndUserSteps extends ScenarioSteps {
                 Assert.assertEquals("Reset Password",signIn.forgotPopupHasTitle());
                 Assert.assertTrue(signIn.forgotPassPopupElements());
                 signIn.messageThatNotifyEmailHasBeenSentToTheUser();
-               try{ Assert.assertEquals("Please enter a valid email", signIn.alertEmailAddressMess());}
-               catch (AssertionError e){
-                   e.printStackTrace();
-               }
+               Assert.assertEquals("Please enter a valid email", signIn.alertEmailAddressMess());
                 break;
         }
     }
@@ -223,13 +220,10 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     public void validationMessagesAreShownForAddressBook() {
-        try {
             Assert.assertEquals("Please enter post code", getDriver().findElement(By.xpath(".//*[@id='postcode.errors']")).getText());
             Assert.assertEquals("Please enter a Town/City", getDriver().findElement(By.xpath(".//*[@id='townCity.errors']")).getText());
             Assert.assertEquals("Please enter address Line 1", getDriver().findElement(By.xpath(".//*[@id='line1.errors']")).getText());
-        } catch(AssertionError e){
-            e.printStackTrace();
-        }
+
     }
 
 //    public void pageMyAccIsOpened(String page) {
