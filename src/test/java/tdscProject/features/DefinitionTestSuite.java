@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 //        "src/test/resources/features/CartPage.feature",
         "src/test/resources/features/Header.feature",
 ////        "src/test/resources/features/Footer.feature",
-//        "src/test/resources/features/LogInRegister.feature",
-//        "src/test/resources/features/MyAccount.feature",
+        "src/test/resources/features/LogInRegister.feature",
+        "src/test/resources/features/MyAccount.feature",
 
         })
 public class DefinitionTestSuite {}

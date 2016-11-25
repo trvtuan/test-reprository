@@ -210,9 +210,26 @@ public class EndUserSteps extends ScenarioSteps {
     public void homePageIsOpenedIfClickOnCancelButton() {
         getDriver().findElement(By.xpath(PATH.ACC_PERS_CANCEL)).click();
     }
-
+    @Step
     public void clickOnButton(String button) {
+        switch (button){
+            case "add address": getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_ADD)).click();
+            case "save": getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_UPDATE)).click();
+        }
+    }
+    @Step
+    public void addNewAddress() {
+        myAcc.addNewAddress();
+    }
 
+    public void validationMessagesAreShownForAddressBook() {
+        try {
+            Assert.assertEquals("Please enter post code", getDriver().findElement(By.xpath(".//*[@id='postcode.errors']")).getText());
+            Assert.assertEquals("Please enter a Town/City", getDriver().findElement(By.xpath(".//*[@id='townCity.errors']")).getText());
+            Assert.assertEquals("Please enter address Line 1", getDriver().findElement(By.xpath(".//*[@id='line1.errors']")).getText());
+        } catch(AssertionError e){
+            e.printStackTrace();
+        }
     }
 
 //    public void pageMyAccIsOpened(String page) {

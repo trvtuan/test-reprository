@@ -116,4 +116,7 @@ public interface PATH {
 //    String ACC_ADDRESS
 //    String ACC_ADDRESS
 
+
+    String ACC_ADDRESS_UPDATE = ".//*[@id='addressform_button_panel']//button";
+    String ACC_ADDRESS_CANCEL = ".//*[@id='addressform_button_panel']//a";
 }

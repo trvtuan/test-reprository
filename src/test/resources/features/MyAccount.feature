@@ -3,7 +3,7 @@ Feature: As a user , I should be able to change my personal details
           tracking orders
 
 
-  Scenario: Verify that My Account pop-up is opened upon hover the text link.
+  Scenario: sel.08.0001 Verify that My Account pop-up is opened upon hover the text link.
     Given go to website
     When click on "Sign In"
     And sign in using "tuan.truong@zaelab.com" pass "123456"
@@ -31,7 +31,7 @@ Feature: As a user , I should be able to change my personal details
 #     |Personal Details  |               |
 
 
-  Scenario: Verify that alert messages are shown if submit if required fields are not populated.
+  Scenario: sel.08.0002 Verify that alert messages are shown if submit if required fields are not populated.
     Given go to website
     When click on "Sign In"
     And sign in using "tuan.truong@zaelab.com" pass "123456"
@@ -44,10 +44,13 @@ Feature: As a user , I should be able to change my personal details
     And home page is opened if click on cancel button
     Then "home page" is opened
 
-  Scenario: Verify that validation messages are shown in Password Update page.
+  Scenario: sel.08.0003 Verify that user is able to add a new address into Address Book.
     Given go to website
     When click on "Sign In"
     And sign in using "tuan.truong@zaelab.com" pass "123456"
     And hover to my account text link
     And click on "Address Book" option
     And click on "add address" button
+    And click on "save" button
+    Then validation messages are shown for address book
+    And add new address

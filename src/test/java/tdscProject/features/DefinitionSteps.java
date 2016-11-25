@@ -149,6 +149,16 @@ public class DefinitionSteps {
         endUserSteps.clickOnButton(button);
     }
 
+    @And("^add new address$")
+    public void addNewAddress() throws Throwable {
+        endUserSteps.addNewAddress();
+    }
+
+    @Then("^validation messages are shown for address book$")
+    public void validationMessagesAreShownForAddressBook() throws Throwable {
+      endUserSteps.validationMessagesAreShownForAddressBook();
+    }
+
 
 //
 //    @Then("^page \"([^\"]*)\" is opened$")

@@ -64,4 +64,9 @@ public class MyAccount extends PageObject {
             $(PATH.ACC_PERS_UPDATE).click();
         }
     }
+
+    public void addNewAddress() {
+        $(".//*[@id='address.line1']").sendKeys("test address");
+
+    }
 }
