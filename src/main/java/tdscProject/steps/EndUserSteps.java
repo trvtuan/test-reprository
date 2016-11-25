@@ -1,5 +1,6 @@
 package tdscProject.steps;
 
+import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
@@ -34,10 +35,11 @@ public class EndUserSteps extends ScenarioSteps {
                 Assert.assertTrue(getDriver().
                         findElement(By.xpath("html/body/main/div[3]/div[3]/div[5]/div[1]")).isDisplayed());
                 break;
-            case "Personal Details": Assert.assertTrue(myAcc.fieldsArePresented());
+            case "Personal Details":
+                Assert.assertTrue(myAcc.fieldsArePresented());
                 break;
 
-            case "":
+            case "Order History":
                 break;
 
         }
@@ -63,16 +65,16 @@ public class EndUserSteps extends ScenarioSteps {
                 header.clickOnSignIn();
                 break;
             case "Login":
-                Assert.assertEquals("Returning Customer",signIn.signInPageHasTitle());
+                Assert.assertEquals("Returning Customer", signIn.signInPageHasTitle());
                 Assert.assertTrue(signIn.signInPageHasSuchElements());
                 signIn.clickOnLoginSignIn();
                 break;
             case "forgot password":
                 signIn.clickOnForgotPassword();
-                Assert.assertEquals("Reset Password",signIn.forgotPopupHasTitle());
+                Assert.assertEquals("Reset Password", signIn.forgotPopupHasTitle());
                 Assert.assertTrue(signIn.forgotPassPopupElements());
                 signIn.messageThatNotifyEmailHasBeenSentToTheUser();
-               Assert.assertEquals("Please enter a valid email", signIn.alertEmailAddressMess());
+                Assert.assertEquals("Please enter a valid email", signIn.alertEmailAddressMess());
                 break;
         }
     }
@@ -103,6 +105,7 @@ public class EndUserSteps extends ScenarioSteps {
     public void logInWithUserPass(String user, String pass) throws Throwable {
         hbr.logInWithUserPass(user, pass);
     }
+
     @Step
     public void signInUsingPass(String arg0, String arg1) {
         header.signInUsingPass(arg0, arg1);
@@ -110,125 +113,157 @@ public class EndUserSteps extends ScenarioSteps {
 //            getDriver().findElement(By.xpath(PATH.TC_ACCEPT)).click();
 //        }
     }
+
     @Step
     public void totalSavingIsShownInTheHeader() {
         Assert.assertEquals("2016 Total Savings:", header.totalSavingTitle());
         Assert.assertTrue(header.myAccountProfileIsShown());
     }
+
     @Step
     public void validationMessagesAreShownInThePage() {
-        Assert.assertEquals("Your username or password was incorrect.",signIn.validationMessages());
+        Assert.assertEquals("Your username or password was incorrect.", signIn.validationMessages());
     }
 
     @Step
     public void clickOnMagnifyingGlass() {
         srcpage.clickOnMagnifyingGlass();
     }
+
     @Step
     public void populateFieldWith(String emailaddress) {
         signIn.populateFieldWith(emailaddress);
     }
+
     @Step
     public void messageThatNotifyEmailHasBeenSentToTheUser() {
         signIn.messageThatNotifyEmailHasBeenSentToTheUser();
-        Assert.assertEquals(PATH.FWP_TEXT,signIn.messageText());
+        Assert.assertEquals(PATH.FWP_TEXT, signIn.messageText());
     }
+
     @Step
     public void emptySearchResultPageIsOpened() {
         Assert.assertTrue(srcpage.emptySearchResultPageIsOpened());
     }
+
     @Step
     public void clickOnContinueShoppingButtonInThePage() {
         srcpage.clickOnContinueShoppingButtonInThePage();
     }
+
     @Step
     public void clickOnXButonToClosePopUp() {
         signIn.clickOnXButonToClosePopUp();
         signIn.clickOnForgotPassword();
     }
+
     @Step
     public void clickOnBreadcrumb(String breadcrumb) {
-        switch (breadcrumb){
+        switch (breadcrumb) {
 
-            case "home": signIn.clickOnBreadcrumb(0);
-                    }
+            case "home":
+                signIn.clickOnBreadcrumb(0);
+        }
     }
+
     @Step
     public void hoverToMyAccountTextLink() {
         myAcc.hoverToMyAccountTextLink();
     }
+
     @Step
     public void myAccountPopUpIsOpenedWithOptions() {
-        Assert.assertEquals(PATH.ACC_OPTIONS_TEXT,myAcc.myAccountPopUpIsOpenedWithOptions());
+        Assert.assertEquals(PATH.ACC_OPTIONS_TEXT, myAcc.myAccountPopUpIsOpenedWithOptions());
         Assert.assertTrue(myAcc.getDriver().findElement(By.xpath(PATH.ACC_OPTIONS)).isDisplayed());
 
     }
+
     @Step
     public void clickOnOption(String option) {
-        switch (option){
-            case "Order History":myAcc.clickOnOption(2);
+        switch (option) {
+            case "Order History":
+                myAcc.clickOnOption(2);
                 break;
-            case "Email Address":myAcc.clickOnOption(3);
+            case "Email Address":
+                myAcc.clickOnOption(2);
                 break;
-            case "Address Book":myAcc.clickOnOption(5);
+            case "Address Book":
+                myAcc.clickOnOption(4);
+                Serenity.getCurrentSession().put("1", getDriver().findElement(By.xpath("//*[@class='account-cards card-select']")).getSize());
                 break;
-            case "Payment Details":myAcc.clickOnOption(6);
+            case "Payment Details":
+                myAcc.clickOnOption(6);
                 break;
-            case "Password":myAcc.clickOnOption(8);
+            case "Password":
+                myAcc.clickOnOption(8);
                 break;
-            case "Sign Out": myAcc.clickOnOption(9);
+            case "Sign Out":
+                myAcc.clickOnOption(9);
                 break;
 //            case "":
 //                break;
-            case "Personal Details": myAcc.clickOnOption(3);
+            case "Personal Details":
+                myAcc.clickOnOption(3);
                 break;
         }
 
     }
+
     @Step
     public void emptyDEAFieldAndClickOnUpdate() {
         myAcc.emptyDEAFieldAndClickOnUpdate();
     }
+
     @Step
     public void validationMessagesForTheRequiredFieldsAreShown() {
-        Assert.assertEquals("Please enter a DEA License Number",myAcc.validationMessagesForTheRequiredFieldsAreShown());
-        Assert.assertEquals("Please correct the errors below.",signIn.validationMessages());
+        Assert.assertEquals("Please enter a DEA License Number", myAcc.validationMessagesForTheRequiredFieldsAreShown());
+        Assert.assertEquals("Please correct the errors below.", signIn.validationMessages());
 
     }
+
     @Step
     public void updateThePersonalDetails() {
-      myAcc.updateThePersonalDetails();
+        myAcc.updateThePersonalDetails();
     }
+
     @Step
     public void infoIsUpdated() {
-        Assert.assertEquals("Your profile has been updated",signIn.validationMessages());
+        Assert.assertEquals("Your profile has been updated", signIn.validationMessages());
     }
+
     @Step
     public void homePageIsOpenedIfClickOnCancelButton() {
         getDriver().findElement(By.xpath(PATH.ACC_PERS_CANCEL)).click();
     }
+
     @Step
     public void clickOnButton(String button) {
-        switch (button){
-            case "add address": getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_ADD)).click();
-            case "save": getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_UPDATE)).click();
+        switch (button) {
+            case "add address":
+                getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_ADD)).click();
+            case "save":
+                getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_UPDATE)).click();
         }
     }
+
     @Step
     public void addNewAddress() {
         myAcc.addNewAddress();
+        Assert.assertEquals("Your address was created.", signIn.validationMessages());
     }
 
     public void validationMessagesAreShownForAddressBook() {
-            Assert.assertEquals("Please enter post code", getDriver().findElement(By.xpath(".//*[@id='postcode.errors']")).getText());
-            Assert.assertEquals("Please enter a Town/City", getDriver().findElement(By.xpath(".//*[@id='townCity.errors']")).getText());
-            Assert.assertEquals("Please enter address Line 1", getDriver().findElement(By.xpath(".//*[@id='line1.errors']")).getText());
+        Assert.assertEquals("Please enter post code", getDriver().findElement(By.xpath(".//*[@id='postcode.errors']")).getText());
+        Assert.assertEquals("Please enter a Town/City", getDriver().findElement(By.xpath(".//*[@id='townCity.errors']")).getText());
+        Assert.assertEquals("Please enter address Line 1", getDriver().findElement(By.xpath(".//*[@id='line1.errors']")).getText());
+        Assert.assertEquals("Please correct the errors below.", signIn.validationMessages());
 
     }
 
-//    public void pageMyAccIsOpened(String page) {
-//        switch (page){
-//            case ""
-//        }
-//    }
+    public void newAddressIsAddedIntoAddressBook() {
+        signIn.clickOnBreadcrumb(1);
+        Assert.assertTrue(myAcc.newAddressIsAddedIntoAddressBook());
+    }
+
+
 }

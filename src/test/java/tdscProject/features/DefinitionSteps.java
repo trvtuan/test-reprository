@@ -159,6 +159,11 @@ public class DefinitionSteps {
       endUserSteps.validationMessagesAreShownForAddressBook();
     }
 
+    @Then("^new address is added into address book$")
+    public void newAddressIsAddedIntoAddressBook() throws Throwable {
+        endUserSteps.newAddressIsAddedIntoAddressBook();
+    }
+
 
 //
 //    @Then("^page \"([^\"]*)\" is opened$")

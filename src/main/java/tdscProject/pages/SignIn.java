@@ -74,7 +74,7 @@ public class SignIn extends PageObject{
     }
 
     public void clickOnBreadcrumb(int breadcumb_element) {
-        List<WebElement> br = Lists.newArrayList(getDriver().findElements(By.xpath(PATH.FT_LINKS_ARRAY)));
+        List<WebElement> br = Lists.newArrayList(getDriver().findElements(By.xpath(PATH.SIGN_BREADCRUMB)));
         br.get(breadcumb_element).click();
 
     }
