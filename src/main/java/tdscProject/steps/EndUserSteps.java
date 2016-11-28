@@ -164,6 +164,9 @@ public class EndUserSteps extends ScenarioSteps {
 
             case "home":
                 signIn.clickOnBreadcrumb(0);
+                break;
+            case "second menu": signIn.clickOnBreadcrumb(1);
+                break;
         }
     }
 
@@ -242,8 +245,14 @@ public class EndUserSteps extends ScenarioSteps {
         switch (button) {
             case "add address":
                 getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_ADD)).click();
+                break;
             case "save":
                 getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_UPDATE)).click();
+                break;
+
+            case "edit": getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_EDIT)).click();
+                break;
+            case "remove address": getDriver().findElement(By.xpath(PATH.ACC_ADDRESS_REMOVE)).click();
         }
     }
 
@@ -269,5 +278,14 @@ public class EndUserSteps extends ScenarioSteps {
 
     public void searchFor(String search_definition) {
         srcpage.searchFor(search_definition);
+    }
+
+    public void makeSomeChangesAndSave() {
+        getDriver().findElement(By.xpath("//*[@id='address.phone']")).sendKeys("123456789");
+        clickOnButton("save");
+    }
+
+    public void addressIsUpdated() {
+        Assert.assertEquals("Your address was updated.", signIn.validationMessages());
     }
 }

@@ -169,6 +169,16 @@ public class DefinitionSteps {
         endUserSteps.searchFor(search_definition);
     }
 
+    @And("^make some changes and save$")
+    public void makeSomeChangesAndSave() throws Throwable {
+       endUserSteps.makeSomeChangesAndSave();
+    }
+
+    @Then("^address is updated$")
+    public void addressIsUpdated() throws Throwable {
+       endUserSteps.addressIsUpdated();
+    }
+
 
 //
 //    @Then("^page \"([^\"]*)\" is opened$")

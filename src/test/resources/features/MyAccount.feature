@@ -63,8 +63,11 @@ Feature: As a user , I should be able to change my personal details
     And hover to my account text link
     And click on "Address Book" option
     And click on "edit" button
-#    And make some changes and save
-#    Then address is updated
+    And make some changes and save
+    Then address is updated
+    And click on breadcrumb "second menu"
+    And click on "remove address" button
+
 
 
 
