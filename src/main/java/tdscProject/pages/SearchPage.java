@@ -20,4 +20,12 @@ public class SearchPage extends PageObject{
     public void clickOnContinueShoppingButtonInThePage() {
         $(PATH.SRC_EMP_SHOP_BUTTON).click();
     }
+
+    public void searchFor(String search_definition) {
+        $(PATH.SEARCH_BAR).sendKeys(search_definition);
+    }
+
+    public void searchPageIsOpenedWithResults() {
+
+    }
 }

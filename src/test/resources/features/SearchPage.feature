@@ -13,8 +13,8 @@ Feature: As a user,
 
   Scenario: sel.06.0002 Verify that "Search" page is opened with search results.
       Given go to website
-      When search for ""
+      When search for "borsch"
       And click on magnifying glass
-      Then search page with results is opened.
+      Then "search page" is opened
 
 

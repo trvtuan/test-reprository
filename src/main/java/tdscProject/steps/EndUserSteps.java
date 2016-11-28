@@ -41,6 +41,7 @@ public class EndUserSteps extends ScenarioSteps {
 
             case "Order History":
                 break;
+            case "search page": srcpage.searchPageIsOpenedWithResults();
 
         }
 
@@ -266,4 +267,7 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
 
+    public void searchFor(String search_definition) {
+        srcpage.searchFor(search_definition);
+    }
 }

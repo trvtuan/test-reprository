@@ -164,6 +164,11 @@ public class DefinitionSteps {
         endUserSteps.newAddressIsAddedIntoAddressBook();
     }
 
+    @When("^search for \"([^\"]*)\"$")
+    public void searchFor(String search_definition) throws Throwable {
+        endUserSteps.searchFor(search_definition);
+    }
+
 
 //
 //    @Then("^page \"([^\"]*)\" is opened$")
